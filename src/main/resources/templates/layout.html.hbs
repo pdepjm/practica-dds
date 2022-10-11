@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/main.css">
+  <meta charset="UTF-8">
+  {{# block "titulo" }}
+  {{/block}}
+</head>
+
+<body>
+  <nav>
+      <p>
+          <a href="/home">Home</a> |
+          <a href="/cumpleanios">Cumpleanios</a> |
+          <a href="/login">Iniciar Sesión</a>
+      </p>
+  </nav>
+  <main>
+    <h1>Record-anios</h1>
+    {{# block "contenido" }}
+    {{/block}}
+  </main>
+  <footer class="fondo-gris">
+    Copyright 2022 Record-anios
+  </footer>
+</body>
+
+</html>

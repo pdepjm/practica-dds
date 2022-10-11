@@ -1,0 +1,22 @@
+{{#partial "titulo"}}
+    <title>RECORDANIOS | CUMPLEANIOS</title>
+{{/partial}}
+
+{{#partial "contenido"}}
+    <p>Aca podrás ver o buscar los cumpleanios de las personas que conoces.</p>
+    <p>Recordanios te los recuerda!</p>
+    <form>
+        <label>Buscar por nombre:</label>
+        <input name="filtro" type="text" value="{{filtro}}" placeholder="Ingrese nombre">
+        <input value="Buscar" type="submit">
+    </form>
+    <ul>
+        {{#cumpleanios}}
+            <li><a href="/cumpleanios/{{id}}">{{nombre}}</a></li>
+        {{/cumpleanios}}
+    </ul>
+
+    <a href="/cumpleanios/nuevo">Agregar nuevo cumpleanios</a>
+{{/partial}}
+
+{{> layout.html.hbs}}

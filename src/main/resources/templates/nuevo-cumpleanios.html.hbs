@@ -1,0 +1,17 @@
+{{#partial "titulo"}}
+    <title>RECORDANIOS | NUEVO</title>
+{{/partial}}
+
+{{#partial "contenido"}}
+    <p>Agrega el nombre del nuevo cumpleaniero y su fecha de cumpleanios</p>
+    <p>Recordanios te lo va a recordar:</p>
+    <form action="/cumpleanios" method="post">
+        <label>Nombre</label>
+        <input value="Ingrese nombre" name="nombre" type="text">
+        <label> Fecha</label>
+        <input value="Ingrese fecha" name="fecha" type="date">
+        <input value="Crear cumpleanios" type="submit">
+    </form>
+{{/partial}}
+
+{{> layout.html.hbs}}

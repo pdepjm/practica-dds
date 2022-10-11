@@ -1,21 +1,20 @@
 package db;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
+import model.Cumpleanios;
+import org.junit.jupiter.api.Test;
 import org.uqbarproject.jpa.java8.extras.WithGlobalEntityManager;
 import org.uqbarproject.jpa.java8.extras.test.AbstractPersistenceTest;
 
-public class ContextTest extends AbstractPersistenceTest implements WithGlobalEntityManager {
+import java.time.LocalDate;
 
-	@Test
-	public void contextUp() {
-		assertNotNull(entityManager());
-	}
+public class ContextTest extends AbstractPersistenceTest implements
+    WithGlobalEntityManager {
 
-	@Test
-	public void contextUpWithTransaction() throws Exception {
-		withTransaction(() -> {});
-	}
+  @Test
+  public void contextUp() {
+    Cumpleanios mstislav = new Cumpleanios("Mstislav", LocalDate.now());
+ 
+    persist(mstislav);
+  }
 
 }

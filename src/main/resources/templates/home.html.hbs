@@ -1,0 +1,16 @@
+{{#partial "titulo"}}
+    <title>RECORDANIOS | HOME</title>
+{{/partial}}
+
+{{#partial "contenido"}}
+    <p>No te acordas los cumpleanios de tus amigos o familiares?</p>
+    <p>No pasa nada! Recordanios te los recuerda:</p>
+    <ul>
+        {{#cumpleanios}}
+            <li><a href="/cumpleanios/{{id}}">{{nombre}}</a></li>
+        {{/cumpleanios}}
+    </ul>
+    <a href="/cumpleanios">Ver todos los cumpleanios </a>
+{{/partial}}
+
+{{> layout.html.hbs}}
